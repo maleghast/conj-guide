@@ -4,7 +4,7 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[org.clojure/clojure "1.9.0"]
+  :dependencies [[org.clojure/clojure "1.10.1"]
                  [ring-server "0.5.0"]
                  [reagent "0.8.1"]
                  [reagent-utils "0.3.1"]
@@ -87,13 +87,13 @@
          :target-path "resources/public/css"}
 
   :profiles {:dev {:repl-options {:init-ns conj-guide.repl}
-                   :dependencies [[cider/piggieback "0.3.10"]
-                                  [binaryage/devtools "0.9.10"]
+                   :dependencies [[cider/piggieback "0.5.0"]
+                                  [binaryage/devtools "1.0.2"]
                                   [ring/ring-mock "0.3.2"]
                                   [ring/ring-devel "1.7.1"]
                                   [prone "1.6.1"]
-                                  [figwheel-sidecar "0.5.17"]
-                                  [nrepl "0.4.5"]
+                                  [figwheel-sidecar "0.5.20"]
+                                  [nrepl "0.8.0-alpha5"]
                                   [pjstadig/humane-test-output "0.9.0"]
                                   
                                   ;; To silence warnings from sass4clj dependecies about missing logger implementation
@@ -101,14 +101,13 @@
                                    ]
 
                    :source-paths ["env/dev/clj"]
-                   :plugins [[lein-figwheel "0.5.17"]
-                             [cider/cider-nrepl "0.18.0"]
-                             [org.clojure/tools.namespace "0.3.0-alpha4"
+                   :plugins [[lein-figwheel "0.5.21-SNAPSHOT"]
+                             [cider/cider-nrepl "0.25.0"]
+                             [org.clojure/tools.namespace "1.0.0"
                               :exclusions [org.clojure/tools.reader]]
-                             [refactor-nrepl "2.4.0"
+                             [refactor-nrepl "2.5.0"
                               :exclusions [org.clojure/clojure]]
-                             [deraen/lein-sass4clj "0.3.1"]
-                             ]
+                             [deraen/lein-sass4clj "0.5.1"]]
 
                    :injections [(require 'pjstadig.humane-test-output)
                                 (pjstadig.humane-test-output/activate!)]
